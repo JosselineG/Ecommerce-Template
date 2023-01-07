@@ -1,6 +1,32 @@
 .home{
-   
-    
     width: 100%;
     height: 100vh;
+
+   background-color: #bbad96;
+   color: black;
+
+}
+
+.homeTitle{
+
+    
+   margin-top: 0px;
+
+
+}
+.description{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+
+
+}
+
+.paragraph{
+    width: 40%;
+    margin-left: 40px;
+
+    text-align: left;
 }

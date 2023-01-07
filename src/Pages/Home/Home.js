@@ -4,9 +4,9 @@ import "./Home.css"
 const Home = () => {
   return (
     <div className='home'>
-     <h1>Welcome</h1>
+     <h1 className='homeTitle'>Welcome</h1>
      <div className='description'>
-      <span>
+      <span className='paragraph'>
         Lorem ipsum dolor sit amet. 
         Et voluptas dolorem ut veniam quia est debitis corrupti.
         Vel facilis maiores sit itaque doloremque eos quidem esse vel 
@@ -21,6 +21,10 @@ const Home = () => {
         enim est dolorem Quis.
 
       </span>
+      <div>
+
+        IMAGE
+      </div>
       </div>
       </div>
   )
