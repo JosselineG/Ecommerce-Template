@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+ import Header from "./Components/Header" 
+import Footer from "./Components/Footer"
+import Cart from "./Pages/Cart/Cart"
+import Shop from "./Pages/Shop/Shop"
+import Home from "./Pages/Home/Home"
+import {Route, Routes } from 'react-router-dom'
 
+/* import { motion } from "framer-motion"
+
+import FilterVintageOutlinedIcon from '@mui/icons-material/FilterVintageOutlined';
+
+ */
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header /> 
+
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/Cart' element={<Cart />} />
+          <Route path='/Shop' element={<Shop />} />
+
+
+        </Routes>
+
+      <Footer />
+
+
+
     </div>
   );
 }

@@ -1,0 +1,9 @@
+.footer{
+    width: 100%;
+    height: 20vh;
+    color: whitesmoke;
+    background-color: black;
+
+    bottom:auto;
+    position: absolute;
+}
