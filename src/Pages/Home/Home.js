@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Home.css"
+import homeImg from '../Home/HomeImg.jpg'
 
 const Home = () => {
   return (
@@ -23,7 +24,7 @@ const Home = () => {
       </span>
       <div>
 
-        IMAGE
+      <img className='MainImg' src={homeImg} alt='homeImg'/>
       </div>
       </div>
       </div>

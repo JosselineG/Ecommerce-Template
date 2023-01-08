@@ -2,7 +2,7 @@
     width: 100%;
     height: 100vh;
 
-   background-color: #bbad96;
+   background-color: #d0c8bb;
    color: black;
 
 }
@@ -18,7 +18,7 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
+    justify-content: space-evenly; 
     align-items: center;
 
 
@@ -26,7 +26,18 @@
 
 .paragraph{
     width: 40%;
+    height: 70vh;
     margin-left: 40px;
 
     text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainImg{
+    border: 4px solid black;
+    border-radius: 10px;
+    height: 80vh;
+    width: 400px;
 }

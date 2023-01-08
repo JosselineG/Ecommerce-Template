@@ -6,4 +6,6 @@
 
     bottom:auto;
     position: absolute;
+
+    border-top: 4px solid black;
 }
