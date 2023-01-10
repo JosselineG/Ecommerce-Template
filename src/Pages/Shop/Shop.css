@@ -2,5 +2,42 @@
     background-color: rgba(35, 34, 34, 0.963);
     color: whitesmoke;
     width: 100%;
-    height: 100vh;
+    height: auto;
+
+
+
+  
 }
+.shop h1{
+
+    padding: 0px;
+    margin: 0px;
+}
+
+.productsB{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 10px;
+    place-items: center;
+}
+
+.samp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.prods{
+   border-radius: 20px;
+
+    margin: 10px;
+    padding: 10px;
+
+    width: 90%;
+    height: 60vh;
+} 
+
+
+
+
