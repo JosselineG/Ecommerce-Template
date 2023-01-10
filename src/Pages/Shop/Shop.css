@@ -2,16 +2,19 @@
     background-color: rgba(35, 34, 34, 0.963);
     color: whitesmoke;
     width: 100%;
-    height: auto;
+    height: 400vh;
 
-
-
-  
+    overflow: hidden;
 }
 .shop h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
 
-    padding: 0px;
-    margin: 0px;
+    padding: 10px;
+    margin: 10px;
 }
 
 .productsB{
@@ -40,4 +43,21 @@
 
 
 
+.shop button{
+    width: 32%;
+    height: 30px;
+
+    color: white;
+    font-size:13px;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: transparent;
+} 
+
+.shop button:hover{
+    border: 2px solid black;
+    background: linear-gradient(70deg,#e98673,#f2dbbb);
+    background-color: whitesmoke;
+    color: black;
+} 
 

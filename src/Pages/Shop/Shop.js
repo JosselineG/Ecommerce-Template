@@ -4,6 +4,7 @@ import { breads } from '../breads';
 import { drinks } from '../drinks'
 import { pastry } from '../pastry'
 
+
 const Shop = () => {
 
 
@@ -21,6 +22,7 @@ const Shop = () => {
 
             <p> {produce.productName}</p>
             <p> {produce.price}</p>
+            <button>Add to Cart</button>
 
           </div>
 
@@ -38,10 +40,12 @@ const Shop = () => {
             <p> {pastries.productName}</p>
             <p> {pastries.price}</p>
 
+            <button>Add to Cart</button>
           </div>
 
 
         )}
+      
 
       </div>
       <h1>Beverages</h1>
@@ -53,6 +57,8 @@ const Shop = () => {
 
             <p> {beverages.productName}</p>
             <p> {beverages.price}</p>
+
+            <button>Add to Cart</button>
 
           </div>
 
