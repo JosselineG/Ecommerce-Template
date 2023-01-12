@@ -1,15 +1,16 @@
  .header{
-    background-color:black;
-    background: url("bgIMG.jpg") center;
-    background-size: cover;
+   
+ background: url("img3.jpg") center;
+    background-size: cover; 
     width: 100%;
-    height: 65vh;
+    height: 75vh;
     position: relative;/* sends background to the back */
 
     color: white;
   
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 
     border-bottom: 4px solid black;

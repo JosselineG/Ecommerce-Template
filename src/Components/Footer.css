@@ -8,4 +8,18 @@
     position: absolute;
 
     border-top: 4px solid black;
+
+  
+}
+
+.socialMedia{
+  
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.mIcons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

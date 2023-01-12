@@ -14,11 +14,11 @@ function Header() {
      
       <div className='images'>
 
-        <img className='imageB' src={img1} alt='image1' />
+   {/*      <img className='imageB' src={img1} alt='image1' />
         <img className='imageM' src={img2} alt='image2' />
         <img className='imageC' src={img3} alt='image3' />
         <img className='imageM' src={img4} alt='image4' />
-        <img className='imageL' src={img5} alt='image5' />
+        <img className='imageL' src={img5} alt='image5' /> */}
       </div>
 
       <div className='title'><h1>Online Bakery</h1></div>

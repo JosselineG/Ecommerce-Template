@@ -14,7 +14,7 @@ import FilterVintageOutlinedIcon from '@mui/icons-material/FilterVintageOutlined
 function App() {
   return (
     <div className="App">
-      <Header /> 
+     
 
         <Routes>
           <Route path='/' element={<Home/>}/>

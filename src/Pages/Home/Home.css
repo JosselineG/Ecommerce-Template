@@ -1,9 +1,9 @@
 .home{
     width: 100%;
-    height: 100vh;
+    height: auto;
 
-   background-color: #d0c8bb;
-   color: black;
+   background-color:  rgba(35, 34, 34, 0.963);
+   color: white;
 
 }
 
@@ -36,8 +36,13 @@
 }
 
 .MainImg{
+   
+   
+    margin: 30px;
+
     border: 4px solid black;
     border-radius: 10px;
     height: 80vh;
     width: 400px;
+
 }
