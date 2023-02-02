@@ -1,133 +1,181 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './Shop.css'
 import { breads } from '../breads';
 import { drinks } from '../drinks'
 import { pastry } from '../pastry'
 import Navbar from "../../Components/Navbar"
 
-const Shop = (props) => {
+
+function Shop(props) {
 
 
-const [click,setClick] = useState()
-const [quantity,setQuantity] = useState(0)
-/*const [prevQ,setPrevQ] = useState(0)
-const [Id,setId] = useState(1)
-const [prevI,setPrevI] = useState([]) */
+  const [quantity, setQuantity] = useState(0)
+  const [addItems, setAddItems] = useState([])
+  const [ItemsId, setItemsId] = useState([])
+
+
   const handleChange = (e) => {
-
-    setClick(...click, e.target.name);
-    setQuantity(...quantity, e.target.value);
+    e.preventDefault();
+    setQuantity(...quantity);
   }
 
 
-    
-  const handleClick= (e) => {
+  const handleIncrement = (e,bread,beverages,pastries) => {
+    e.preventDefault();
 
- /*    if(Id == prevI){
-    
-      setQuantity(prevQ + 1)
-      setPrevQ(quantity)
 
-  }else if(Id == e.target.value ){
- 
-   setQuantity(quantity + 1)
-   setPrevQ(quantity)
-  
+   setQuantity(bread.quantity = bread.quantity + 1)
+   setItemsId(e.target.id)
+   setAddItems({[ItemsId]: quantity})
 
-  }else{
-    
-    setPrevI([...prevI, Id])
-    setId(e.target.value)
-    setQuantity(0)
- 
-  } */
+   setQuantity(pastries.quantity = pastries.quantity + 1)
+   setItemsId(e.target.id)
+   setAddItems({[ItemsId]: quantity})
 
-  setQuantity(quantity => quantity + 1)
-    
-   /*  console.log(Id) */
-  /*   console.log(prevI) */
+   setQuantity(beverages.quantity = beverages.quantity + 1)
+   setItemsId(e.target.id)
+   setAddItems({[ItemsId]: quantity})
+
+
+    console.log(addItems)
   }
 
- 
+  const handleDecrement = (e,bread,pastries,beverages) => {
+    e.preventDefault();
+
+    setQuantity(bread.quantity = bread.quantity - 1)
+    setItemsId(e.target.id)
+    setAddItems({[ItemsId]: quantity})
+
+    
+    setQuantity(pastries.quantity = pastries.quantity - 1)
+    setItemsId(e.target.id)
+    setAddItems({[ItemsId]: quantity})
+
+    setQuantity(beverages.quantity = beverages.quantity - 1)
+    setItemsId(e.target.id)
+    setAddItems({[ItemsId]: quantity})
+
+
+    console.log(addItems)
+
+  }
+
 
   return (
+
     <div className='shop'>
 
-     <Navbar className='navS'  quantity={quantity}  />
+      <Navbar quantity={quantity} />
 
 
       <h1>Breads</h1>
       <div className='productsB'>
-        {breads.map(produce =>
-          <div className='samp' key={produce.id}>
-            <img className='prods' src={produce.productImage} />
+        {breads.map((bread) => (
 
-            <p> {produce.productName}</p>
-            <p> {produce.price}</p>
-            <button 
+          
+          <div className='samp' key={bread.id}>
+
+            <img className='prods' src={bread.productImage} />
             
-            value={produce.id}
-            onChange={handleChange}
-            onClick={handleClick}>
-              Add to Cart 
-            </button>
+            <p> {bread.productName}</p>
+            <p> {bread.price}</p>
+
+
+            <div className='buttonQuantity'>
+
+              <button id={bread.id} onChange={handleChange} onClick={(e)=>{handleDecrement(e,bread)}}>
+                -
+              </button>
+
+                <div className='AddToCartQuantity'>
+                 {bread.quantity}
+                </div>
+
+              <button id={bread.id}  onChange={handleChange} onClick={(e)=>{handleIncrement(e,bread)}}>
+              </button>
+            
+            </div>
 
           </div>
 
-
-        )}
+    ))}
 
       </div>
 
       <h1>Pastries</h1>
       <div className='productsB'>
 
-        {pastry.map((pastries,index) => (
+        {pastry.map((pastries) => (
           <div className='samp' key={pastries.id}>
-            <img className='prods' src={pastries.productImage} />
 
+            <img className='prods' src={pastries.productImage} />
             <p> {pastries.productName}</p>
             <p> {pastries.price}</p>
 
-            <button 
-            onChange={handleChange} 
-            onClick={handleClick}
-            value={pastries.id}>
-              Add to Cart
+
+
+            <div className='buttonQuantity'>
+
+              <button id={pastries.id} onChange={handleChange} onClick={(e)=>{handleDecrement(e,pastries)}}>
+                -
               </button>
+
+              <div className='AddToCartQuantity'>
+                {pastries.quantity}
+              </div>
+
+              <button id={pastries.id} onChange={handleChange} onClick={(e)=>{handleIncrement(e,pastries)}}>
+                +
+              </button>
+
+            </div>
+
           </div>
 
+        ))}
 
-      ))}
-      
 
       </div>
-      
+
       <h1>Beverages</h1>
       <div className='productsB'>
 
-        {drinks.map(beverages =>
+        {drinks.map((beverages) => (
           <div className='samp' key={beverages.id}>
-            <img className='prods' src={beverages.productImage} />
 
+            <img className='prods' src={beverages.productImage} />
             <p> {beverages.productName}</p>
             <p> {beverages.price}</p>
 
-            <button  
-            onChange={handleChange} 
-            onClick={handleClick}
-            value={beverages.id}>
-            Add to Cart</button>
+
+            <div className='buttonQuantity'>
+
+              <button id={beverages.id}  onChange={handleChange} onClick={(e)=>{handleDecrement(e,beverages)}}>
+                -
+              </button>
+
+              <div className='AddToCartQuantity'>
+                {beverages.quantity}
+              </div>
+
+              <button id={beverages.id} onChange={handleChange}  onClick={(e)=>{handleIncrement(e,beverages)}}>
+                +
+              </button>
+
+            </div>
 
           </div>
 
 
-        )}
+        ))}
+
+
 
       </div>
 
-
     </div>
+
   )
 }
 

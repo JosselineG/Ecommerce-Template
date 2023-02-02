@@ -12,29 +12,35 @@ export const pastry = [
     productName: "Croissant",
     price: '$' + 1.35,
     productImage: croissant,
+    quantity:0
 },{
     id: 4,
     productName: "Donuts",
     price:'$' +  1.25,
     productImage: donuts,
+    quantity:0
 },{
     id: 5,
     productName: "Cheesecake",
     price: '$' + 2.15,
     productImage: cheesecake,
+    quantity:0
 },{
     id: 6,
     productName: "Macaroons",
     price:'$' +  1.35,
     productImage: macaroons,
+    quantity:0
 },{
     id: 7,
     productName: "Muffin",
     price: '$' + 1.25,
     productImage: muffin,
+    quantity:0
 },{
     id: 8,
     productName: "Tart",
     price: '$' + 2.25,
     productImage: tart,
+    quantity:0
 }]

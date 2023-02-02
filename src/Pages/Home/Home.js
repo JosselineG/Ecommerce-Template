@@ -2,10 +2,12 @@ import React from 'react'
 import "./Home.css"
 import homeImg from '../Home/HomeImg.jpg'
 import Header from "../../Components/Header/Header" 
-const Home = () => {
+import Navbar from '../../Components/Navbar'
+function Home(){
   return (
     <div className='home'>
-         <Header /> 
+         <Header/>
+  
      <h1 className='homeTitle'>Welcome</h1>
      <div className='description'>
       <span className='paragraph'>

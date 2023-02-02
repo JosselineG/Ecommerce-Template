@@ -9,9 +9,11 @@ export const breads = [
     productName: "Baguette",
     price: '$' + 2.25,
     productImage: produce1,
+    quantity:0
 },{
     id: 2,
     productName: "Sourdough",
     price: '$' + 3.25,
     productImage: sourdough,
+    quantity:0
 }]

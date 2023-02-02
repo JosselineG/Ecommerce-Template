@@ -22,6 +22,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px 10px;
     place-items: center;
+
 }
 
 .samp{
@@ -34,7 +35,7 @@
 }
 
 .samp p{
-    height: 30px;
+    height: 35px;
     margin: 0;
     padding: 0;
 }
@@ -46,20 +47,46 @@
 
     width: 90%;
     height: 60vh;
+        /*shadow around image: 0 Horizontal, 4px vertical, 8px blur, 0 spread, color : Here there are multiple shadows*/
+        box-shadow:  0 4px 8px 10px rgba(0, 0, 0, 0.2);
 } 
 
+.buttonQuantity{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 62%;
+    height: 35px;
 
 
-.shop button{
-    width: 42%;
-    height: 30px;
+}
+
+
+.AddToCartQuantity{
+    width: 25%;
+    height: 20px;
 
     color: white;
-    font-size:13px;
+    font-size: 15px;
+  
     border: 2px solid white;
-    border-radius: 30px;
+    border-radius: 20px;
     background-color: transparent;
 } 
+
+.shop button{
+    width: 15%;
+    height: 20px;
+
+    color: white;
+    font-size: 15px;
+  
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: transparent;
+}
 
 .shop button:hover{
     border: 2px solid black;
@@ -67,8 +94,3 @@
     background-color: whitesmoke;
     color: black;
 } 
-
-.navS{
-
-    background-color: #9a6f4c;
-}

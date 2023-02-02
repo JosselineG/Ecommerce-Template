@@ -8,14 +8,17 @@ export const drinks = [
     productName: "Tea",
     price: '$' + 1.25,
     productImage: tea,
+    quantity:0
 },{
     id: 10,
     productName: "Coffee",
     price:'$' + 1.25,
     productImage: coffee,
+    quantity:0
 },{
     id: 11,
     productName: "Juice",
     price:'$' + 1.35,
     productImage: juice,
+    quantity:0
 },]
