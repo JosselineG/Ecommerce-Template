@@ -1,58 +1,86 @@
 import React, { useEffect, useState } from 'react'
 import './Cart.css'
 import Navbar from "../../Components/Navbar"
-import { breads } from '../breads';
-import { drinks } from '../drinks'
-import { pastry } from '../pastry'
 
-function Cart(props) {
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement} from '../../redux/store/storeSlice';
 
-  const [empty, setEmpty] = useState()
 
-/*   useEffect(() => {
-if(props.Items){
-  setEmpty(false);
-}else{
-  setEmpty(true)
-}
-},[props.Items])
-console.log("Items being sent to car" + " " + props.Items)
- */
+function Cart() {
+
+
+  const [empty, setEmpty] = useState(true)
+
+  const cart = useSelector((state) => state.cart.cart)
+  const dispatch = useDispatch()
+
+
+
+
+  useEffect(() => {
+
+    //If length is greater than or equal to 1 set the empty to false and add the list of items to cart
+    if (cart.length >= 1) {
+      setEmpty(false)
+    }
+
+
+  },[cart.length])
+  /* const matchedId = productList.filter((elements) => cart.includes(cart)) */
 
   return (
     <div className='cart'>
 
-       <Navbar  />   
+      <Navbar />
 
       <h1>Cart</h1>
+
 
       <div className='cartListPay'>
 
         <div className='cartItemsList'>
-          {empty ?
 
+          {empty ? <h3>Cart is empty</h3> :
 
-            <h3>Cart is empty</h3>
-            :
-         
             <div className='list'>
 
-"not empty"
-{/* 
-            {breads.map((bread,index) => 
-                  <li key={index}>
-             {bread.price}
-              
-              </li>
+              {cart.map((prods) => (
+                <li className='samp' key={prods.id}>
 
-              )}
- */}
+                  <img alt='' className='image' src={prods.productImage} />
+
+                  <div className='productsDescr' >
+                    <p> {prods.productName}</p>
+                    <p> {prods.price}</p>
+
+                    <div className='buttons'>
+
+                      <button onClick={() => { dispatch(decrement(prods.id)) }}>
+                        -
+                      </button>
+
+                      <div className='AddToCartQuantity'>
+                        {prods.quantity}
+                      </div>
+
+                      <button onClick={() => { dispatch(increment(prods)) }}>
+                        +
+                      </button>
+
+                    </div>
+                  </div>
+
+                </li>
+
+              ))}
+
 
             </div>
-
           }
-
         </div>
+
+
+
 
         <div className='cartItemsPay'>
 

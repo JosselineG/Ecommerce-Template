@@ -22,7 +22,7 @@ function Navbar(props) {
 
         <Link to={"/Shop"}> Shop </Link>
         
-        <Link to={"/Cart"}  ><ShoppingCartOutlinedIcon sx={{ display: "flex", alignItem: "center" }} />({Items})</Link>
+        <Link to={"/Cart"}  ><ShoppingCartOutlinedIcon sx={{ display: "flex", alignItem: "center" }} />{Items}</Link>
       </div>
 
     </div>
