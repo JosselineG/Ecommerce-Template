@@ -63,7 +63,7 @@
 
 }
 
-
+/* 
 .AddToCartQuantity{
     width: 25%;
     height: 20px;
@@ -74,11 +74,11 @@
     border: 2px solid white;
     border-radius: 20px;
     background-color: transparent;
-} 
+}  */
 
 .shop button{
-    width: 15%;
-    height: 20px;
+    width: 55%;
+    height: 25px;
 
     color: white;
     font-size: 15px;

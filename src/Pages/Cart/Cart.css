@@ -87,6 +87,9 @@
 
 .AddToCartQuantity{
 
+    width: 15%;
+    height: 20px;
+
     color: white;
     font-size: 15px;
   
@@ -94,6 +97,26 @@
     border-radius: 20px;
     background-color: transparent;
 } 
+
+.cart button{
+    width: 7%;
+    height: 20px;
+
+    color: white;
+    font-size: 15px;
+  
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+.cart button:hover{
+    border: 2px solid black;
+    background: linear-gradient(80deg,#9a6f4c,#c6beb1);
+    background-color: whitesmoke;
+    color: black;
+} 
+
 
 /* -----------------------------  */
 

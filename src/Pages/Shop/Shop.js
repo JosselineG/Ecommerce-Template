@@ -43,24 +43,18 @@ function Shop() {
 
             <div className='buttonQuantity'>
 
-              <button onClick={() => {dispatch(decrement(itemList.id)) }}>
+              {/* <button onClick={() => {dispatch(decrement(itemList.id)) }}>
                 -
+              </button> */}
+              <button onClick={() => {dispatch(addToCart(itemList))}}>
+             
+                    Add to Cart
+
+
               </button>
-              <div className='AddToCartQuantity'>
-                {cart.map((prods) => (
-                  <div key={prods.id}>
-
-                    {prods.quantity}
-
-                  </div>
-
-                ))}
-
-
-              </div>
-              <button onClick={() => {dispatch(increment(itemList)/* , addToCart(itemList) */ )}}>
+           {/*    <button onClick={() => {dispatch(addToCart(itemList))}}>
                 +
-              </button>
+              </button> */}
 
             </div>
 

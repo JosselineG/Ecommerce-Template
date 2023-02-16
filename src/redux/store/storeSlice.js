@@ -26,8 +26,6 @@ const storeSlice = createSlice({
             }
             
 
-            /*  state.cart = ([action.payload]) */
-
 
         },
 
