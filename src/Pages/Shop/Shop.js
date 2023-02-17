@@ -38,21 +38,20 @@ function Shop() {
             <img alt='' className='prods' src={itemList.productImage} />
 
             <p> {itemList.productName}</p>
-            <p> {itemList.price}</p>
+            <p> {'$' + itemList.price}</p>
 
 
             <div className='buttonQuantity'>
 
-              {/* <button onClick={() => {dispatch(decrement(itemList.id)) }}>
+              {/* <button onClick={() => {dispatch(decrement(itemList)) }}>
                 -
               </button> */}
-              <button onClick={() => {dispatch(addToCart(itemList))}}>
-             
-                    Add to Cart
+              <button onClick={() => { dispatch(addToCart(itemList)) }}>
 
+                Add to Cart
 
               </button>
-           {/*    <button onClick={() => {dispatch(addToCart(itemList))}}>
+              {/*    <button onClick={() => {dispatch(increment(itemList))}}>
                 +
               </button> */}
 

@@ -6,12 +6,15 @@ import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement} from '../../redux/store/storeSlice';
 
 
+
 function Cart() {
 
 
   const [empty, setEmpty] = useState(true)
 
+
   const cart = useSelector((state) => state.cart.cart)
+  const totalAmount = useSelector((state) => state.cart.totalAmount)
   const dispatch = useDispatch()
 
 
@@ -25,8 +28,10 @@ function Cart() {
     }
 
 
-  },[cart.length])
-  /* const matchedId = productList.filter((elements) => cart.includes(cart)) */
+
+  }, [cart.length])
+
+
 
   return (
     <div className='cart'>
@@ -51,11 +56,11 @@ function Cart() {
 
                   <div className='productsDescr' >
                     <p> {prods.productName}</p>
-                    <p> {prods.price}</p>
+                    <p> {'$' + prods.price}</p>
 
                     <div className='buttons'>
 
-                      <button onClick={() => { dispatch(decrement(prods.id)) }}>
+                      <button onClick={() => { dispatch(decrement(prods)) }}>
                         -
                       </button>
 
@@ -80,21 +85,31 @@ function Cart() {
         </div>
 
 
-
-
         <div className='cartItemsPay'>
 
-
           <h2>CheckOut</h2>
+
+          {cart.map((prods) => (
+
+            <div className='Items' key={prods.id}>
+
+              <div className='CheckoutItems' >
+                <p> {prods.productName}</p>
+                <p> {'$' + prods.price * prods.quantity}</p>
+
+              </div>
+            </div>
+
+          ))}
+
+
+          <h4 className='total'>Total: ${Math.round(1000 * totalAmount) / 1000} </h4>
 
 
         </div>
 
 
       </div>
-
-
-
     </div>
   )
 
