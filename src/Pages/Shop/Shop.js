@@ -27,6 +27,10 @@ function Shop() {
 
       <Navbar />
 
+      <div className='STMessage'>
+        <h2>**Local Delivery Only</h2>
+      </div>
+
       <h1>Products</h1>
 
       <div className='productsB'>
@@ -57,11 +61,14 @@ function Shop() {
 
             </div>
 
+
           </div>
 
         ))}
 
       </div>
+
+
 
     </div>
 

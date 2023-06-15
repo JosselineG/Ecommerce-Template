@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './Cart.css'
 import Navbar from "../../Components/Navbar"
+import { Link } from 'react-router-dom'
 
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement} from '../../redux/store/storeSlice';
+import { increment, decrement } from '../../redux/store/storeSlice';
 
 
 
@@ -87,6 +88,11 @@ function Cart() {
 
         <div className='cartItemsPay'>
 
+
+        <div className='ImportantMessage'>
+              <h4>**Local Delivery Only</h4>
+            </div>
+            
           <h2>CheckOut</h2>
 
           {cart.map((prods) => (
@@ -103,11 +109,22 @@ function Cart() {
           ))}
 
 
-          <h4 className='total'>Total: ${Math.round(1000 * totalAmount) / 1000} </h4>
+          <h4 className='total'>Total: ${Math.round(100 * totalAmount) / 100} </h4>
+
+          {empty ? <h3>{null}</h3> :
+          <div className='paymentButton'>
+            <Link to={"/Payment"}>
+              <button>
+
+                Make Payment
+
+
+              </button>
+            </Link>
+          </div>}
 
 
         </div>
-
 
       </div>
     </div>

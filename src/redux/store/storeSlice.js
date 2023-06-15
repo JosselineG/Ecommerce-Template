@@ -5,6 +5,7 @@ const initialState = {
 
     amount: 0,
     totalAmount: 0,
+    totalQuantity:0,
     cart: [],
 }
 
@@ -26,6 +27,9 @@ const storeSlice = createSlice({
 
             const prices = action.payload.price + state.totalAmount
             state.totalAmount = prices
+            
+            const qNums = 1 + state.totalQuantity
+            state.totalQuantity = qNums
 
             if (l) {
                 l.quantity += 1;
@@ -41,6 +45,9 @@ const storeSlice = createSlice({
 
             const prices = state.totalAmount - action.payload.price
             state.totalAmount = prices
+
+            const qNums = state.totalQuantity - 1
+            state.totalQuantity = qNums
 
             //if quantity is less than or equal to 1 than it should return the following
             if (d.quantity <= 1) {
@@ -69,13 +76,21 @@ const storeSlice = createSlice({
         addToCart: (state, action) => {
 
             const p = state.cart.find((items) => items.id === action.payload.id)
+           
 
             const prices = action.payload.price + state.totalAmount
             state.totalAmount = prices
+           
+            const qNums = 1 + state.totalQuantity
+            state.totalQuantity = qNums
 
+            console.log(qNums)
       
             if (p) {
+
                 p.quantity++;
+            
+
             } else {
                 
                 state.cart.push({ ...action.payload, quantity: 1 })
@@ -89,5 +104,5 @@ const storeSlice = createSlice({
 
 })
 
-export const { increment, decrement, addToCart } = storeSlice.actions
+export const { increment, decrement, addToCart} = storeSlice.actions
 export default storeSlice.reducer

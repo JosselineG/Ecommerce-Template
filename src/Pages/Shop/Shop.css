@@ -1,4 +1,4 @@
-.shop{
+.shop {
     background-color: rgba(35, 34, 34, 0.963);
     color: whitesmoke;
     width: 100%;
@@ -6,7 +6,8 @@
 
     overflow: hidden;
 }
-.shop h1{
+
+.shop h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,41 +18,42 @@
     margin: 10px;
 }
 
-.productsB{
-    display:grid;
+.productsB {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px 10px;
     place-items: center;
 
 }
 
-.samp{
+.samp {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    
+
 }
 
-.samp p{
+.samp p {
     height: 35px;
     margin: 0;
     padding: 0;
 }
-.prods{
-   border-radius: 20px;
+
+.prods {
+    border-radius: 20px;
 
     margin: 10px;
     padding: 10px;
 
     width: 90%;
     height: 60vh;
-        /*shadow around image: 0 Horizontal, 4px vertical, 8px blur, 0 spread, color : Here there are multiple shadows*/
-        box-shadow:  0 4px 8px 10px rgba(0, 0, 0, 0.2);
-} 
+    /*shadow around image: 0 Horizontal, 4px vertical, 8px blur, 0 spread, color : Here there are multiple shadows*/
+    box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2);
+}
 
-.buttonQuantity{
+.buttonQuantity {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -61,6 +63,11 @@
     height: 35px;
 
 
+}
+
+.STMessage {
+    margin-left: 5%;
+    text-align: left;
 }
 
 /* 
@@ -76,21 +83,25 @@
     background-color: transparent;
 }  */
 
-.shop button{
+.shop button {
     width: 55%;
-    height: 25px;
+    height: autp;
 
     color: white;
     font-size: 15px;
-  
+
     border: 2px solid white;
     border-radius: 20px;
     background-color: transparent;
+    cursor: pointer;
+
+    
 }
 
-.shop button:hover{
+.shop button:hover {
     border: 2px solid black;
-    background: linear-gradient(80deg,#9a6f4c,#c6beb1);
+    background: linear-gradient(80deg, #9a6f4c, #c6beb1);
     background-color: whitesmoke;
     color: black;
-} 
+   
+}
